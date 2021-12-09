@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+function TimKiem(arr,x) {
+for(var i=0;i<arr.length;i++){
+if(arr[i] == x) return true;
+}
+return false;
+}
+function SoSanh2Array(lk,vl){
+var count = 0;
+for(var i=0;i<lk.length;i++){
+if(TimKiem(vl,lk[i])){
+count++;
+}
+}
+if(count==lk.length) return true;
+return false;
+}
+function Vietlot() {
+var lucky = [];
+do{
+var n = parseInt(Math.random()*46);
+if(!lucky.includes(n)){
+lucky.push(n);
+}
+}while(lucky.length <6);
+console.log(lucky);
+var vietlot = [];
+for(var i=0;i<5;i++){
+vietlot[i] = [];
+do{
+var n = prompt("Nhap 1 so trong khoang 0-45:");
+n = parseInt(n);
+if(!TimKiem(vietlot[i],n)){
+vietlot[i].push(n);
+}
+}while (vietlot[i].length<6);
+}
+var count = 0;
+for(var i=0;i<vietlot.length;i++){
+if(SoSanh2Array(lucky,vietlot[i])){
+alert("Chúc mừng bạn đã trúng 100 tỷ");
+count++;
+break;
+}
+}
+if(count == 0){
+alert("Chúc bạn may mắn vào kỳ quay kế tiếp");
+}
+
+}
+<script/>
+</body>
+</html>
