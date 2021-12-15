@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Dât Binding</title>
+</head>
+<body>
+<h1 class="City">Hà Nội</h1>
+<h2 class="temp">Nhiệt độ: 18<sup>o</sup>c</h2>
+<h2 class="hum">Độ ẩm: 71%</h2>
+<h2 class="press">Áp suất: 1023 </h2>
+<h2 class="wind">Tốc độ gió: 1.5 hm/h</h2>
+<script type="text/javascript" src="Js/Jquery.js"></script>
+<script type="text/javascript">
+    var data = // JSON - Javascript object notation
+        {
+            coord: {
+                lon: -122.08,
+                lat: 37.39
+            },
+            weather: [
+                {
+                    id: 800,
+                    main: "Clear",
+                    description: "clear sky",
+                    icon: "01d"
+                }
+            ],
+            base: "stations",
+            main: {
+                temp: 282.55,
+                feels_like: 281.86,
+                temp_min: 280.37,
+                temp_max: 284.26,
+                pressure: 1023,
+                humidity: 100
+            },
+            visibility: 16093,
+            wind: {
+                speed: 1.5,
+                deg: 350
+            },
+            clouds: {
+                all: 1
+            },
+            dt: 1560350645,
+            sys: {
+                type: 1,
+                id: 5122,
+                message: 0.0139,
+                country: "US",
+                sunrise: 1560343627,
+                sunset: 1560396563
+            },
+            timezone: -25200,
+            id: 420006353,
+            name: "Mountain View",
+            cod: 200
+        }
+    var city = data.name;
+    var contry = data.sys.country;
+    var long = data.coord.lon;
+
+</script>
+</body>
+</html>

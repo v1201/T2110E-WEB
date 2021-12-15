@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // code js tại đây
+        var x; // khai báo biến bên js - dynamic dâttype
+        // number - số
+        // string - chuỗi
+        // array
+        // object - 1 đối tượng
+        // function
+        x = 10; // x là 1 number
+        x = x + 5; // 15
+        console.log(x);
+        var y;
+        y = "xin chào các bạn";
+        console.log(y);
+        x = x + y;
+        console.log(x);
+        /*
+            number + number => number
+            number + string => string
+            string + string => string
+         */
+        console.log("gia tri của x=" +x);
+/*
+        var arr = []; //không cần nói rõ kiểu dữ liệu và kích thước
+        arr[0] = 1;
+        arr[1] = "xin chào";
+        arr[2] = [];
+        arr[2][0] = 15;
+        arr[2][1] = "t2110e";
+        arr[2][2] = [1,2,3,4];
+        arr[3] = 10;
+        // độ sâu array tùy ts
+        // => cấu trúc cây dữ liệu rõ ràng
+        var ary = [3,12,9,90,1,0,15,29];
+        //sắp xếp theo thứ tự tăng dần
+        for(var i = 0; i<arr.length-1;i++){
+            for(var j=0;j<arr.length-i-1;j++){
+                if(arr[j]>ary[j+1]){
+                    var tmp = arr[j];
+                    ary[j]= ary[j+1];
+                    ary[j+1] = tmp;
+                }
+            }
+        }
+        console.log("sau khi xắp xếp : "+ ary)
+        //
+        ary[ary.length] = 159;// ary [8] = 159
+        console.log("sau khi xắp xếp : "+ ary)
+
+
+        //function
+        function TinhTong(a,b){
+            return a+b;
+        }
+        //var c = TinhTong(5,6);
+        console.log("c= " +c);
+      //  InMenu()// chỉ cần nằm cùng script
+       // function InMenu(){
+        //    console.log("Menu: ");
+         //   console.log("1.food");
+        }
+        //alert("cấm trẻ em dưới 18 tuổi truy cập website!");
+       // var kq = confirm("are u sure?"); // return boolean
+       // console.log(kq);
+      //  var p =prompt("how old are u?"); // return string
+        // convert to number
+      //  p = parseInt(p); //covert string to number
+        //18 -> 18
+        //18abc -> 18
+        //1ab8c -> 1
+        // a18bc -> NaN: not a number
+      //  console.log(p + 10);// Nhap vap 18 -> 28
+        //nhap 2 so nguyen tim UCLN va BCNN cua 2 so do
+      //  var n1 = prompt("nhap so thu nhat: ");
+       // n1 = parseInt(n1);
+       // var n2 = prompt("nhap so thu hai");
+       // n2 = parseInt(n2);
+      //  for (var i = n1; i>=1;i--){
+       //     if (n1%i==0 && n2%1==0){
+         //       console.log("UCLN: "+i);
+         //       break;
+            }
+        }
+      //  for(var i=n1;true;i++){
+          //  if (i%n1==0 && i%n2==0){
+            //    console.log("BCNN: "+i);
+             //   break;
+            }
+        }
+        //yeu cau nhap 1 so nguyen
+        //var n;
+       // do{
+           // n = prompt("nhap 1 so nguyen duong");
+           // n = parseInt(n);
+       // }while (isNaN(n))
+
+ */
+        //nhap vao 3 so la canh cua 1 tam giac, sau do tinh chu vi va dien tich
+        //can bac 2: Math.sqrt()
+        var a;
+        var b;
+        var c;
+        do{
+            a = prompt("nhap canh a")
+            a = parseInt(a);
+            b = prompt("nhap canh b")
+            b = parseInt(b);
+            c = prompt("nhap canh c")
+            c = parseInt(c);
+        }while (isNaN(a) || isNaN(b) || isNaN(c) || a <=0 || b<=0 || c<= 0 || (a+b) <=c || (a+c) <= b || (b+c)<=a);
+        var p = a + b + c;
+        console.log("chu vi tam giac la: "+ p);
+        var P = p/2;
+        var s = Math.sqrt(P*(P-a)*(P-b)*(P-c));
+        console.log("dien tich tam giac la: " +s)
+    </script>
+</body>
+</html>
